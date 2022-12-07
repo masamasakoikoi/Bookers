@@ -7,7 +7,7 @@
         <%= @books.each do |book| %>
         <p>タイトル</p>
         <span><%= book.title %></span>
-        <%= link_to "destroy", destroy_book_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+        <%= link_to "destroy", destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
         <% end %>
         <h2>New book</h2>
         <%=form_with model:@book do |f|%>
